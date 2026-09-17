@@ -220,3 +220,13 @@ data/remote_backups/
 .panoptes
 
 docs/plans/
+
+# Local/example datasets and generated model artifacts
+data/example_images*/
+data/example_images_ap_pa_protocol.json
+data/fluoro_images_round_1/
+data/fluoro_it_edge_sample.json
+data/pelvis_segmentation_dataset_samples/
+data/protocol_experiment_blank_512.json
+data/round2_multi_reviewer_review_*/
+models/
