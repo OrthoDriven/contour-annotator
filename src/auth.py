@@ -459,12 +459,11 @@ class OneDriveBackup:
     Thread-safe: upload operations run in background threads.
     """
 
-    def __init__(self, tk_root: Optional[tk.Misc] = None) -> None:
+    def __init__(self) -> None:
         self._client: Optional[GraphServiceClient] = None
         self._credential: Optional[DeviceCodeCredential] = None
         self._lock = threading.Lock()
         self._initialized = False
-        self._tk_root = tk_root
 
     def _ensure_initialized(self) -> bool:
         """Lazy initialization of Graph client. Returns True if ready."""
@@ -476,7 +475,7 @@ class OneDriveBackup:
                 return True
 
             try:
-                self._client = get_graph_client(tk_root=self._tk_root)
+                self._client = get_graph_client()
                 self._credential = None  # credential is managed by get_graph_client
                 self._initialized = True
                 logger.info("Initialization complete")
