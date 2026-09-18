@@ -230,3 +230,5 @@ data/pelvis_segmentation_dataset_samples/
 data/protocol_experiment_blank_512.json
 data/round2_multi_reviewer_review_*/
 models/
+# Local annotation/example data
+data/
